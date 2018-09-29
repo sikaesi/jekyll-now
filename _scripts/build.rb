@@ -30,7 +30,7 @@ begin
     end
     
     meta = YAML.load(meta_str)
-    title = prefix.concat(meta["title"])
+    title = prefix + "-" + meta["title"]
 
     p title
 
