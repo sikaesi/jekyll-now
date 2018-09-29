@@ -19,7 +19,7 @@ begin
           next if sep_count <= 2
         end
         if l.start_with?("created_at:")
-          p l｡spｨt(":")[1]
+          p l｡split(":")[1]
         end 
         if sep_count <= 1
           meta_str += l
