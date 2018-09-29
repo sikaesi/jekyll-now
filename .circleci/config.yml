@@ -11,7 +11,7 @@ deployment:
     commands:
       - git config --global user.email "sikaesi@gmail.com"
       - git config --global user.name "sikaesi" 
-      - ruby ./_scripts/build.rb
+      - ruby ../_scripts/build.rb
       - git add . 
       - git commit -m "[ci skip]"
       - git push -f origin master
