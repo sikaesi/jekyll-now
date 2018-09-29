@@ -1,17 +1,25 @@
-machine:
-  ruby:
-    version: 2.3.0
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    machine:
+      ruby:
+       version: 2.3.0
 
-dependencies:
-  override:
+  dependencies:
+   override:
 
-deployment:
-  deploy:
-    branch: master
-    commands:
-      - git config --global user.email "sikaesi@gmail.com"
-      - git config --global user.name "sikaesi" 
-      - ruby ../_scripts/build.rb
-      - git add . 
-      - git commit -m "[ci skip]"
-      - git push -f origin master
+  deployment:
+    deploy:
+      branch: master
+      commands:
+        - git config --global user.email "sikaesi@gmail.com"
+        - git config --global user.name "sikaesi" 
+        - ruby ../_scripts/build.rb
+        - git add . 
+        - git commit -m "[ci skip]"
+        - git push -f origin master
+
