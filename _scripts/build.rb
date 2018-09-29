@@ -13,6 +13,7 @@ begin
 
     File.open(filename) do |file|
       file.each_line do |l|
+        p l
         if l =~ /^---\n$/ 
           sep_count += 1
           next if sep_count <= 2
