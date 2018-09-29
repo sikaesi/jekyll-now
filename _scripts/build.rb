@@ -6,7 +6,7 @@ begin
   files = Dir.glob("_drafts/*")
   
   files.each do | filename |
-    sep_count = 0
+    sep_count = 1
     meta_str = ""
     body_str = ""
     p filename
