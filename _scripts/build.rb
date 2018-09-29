@@ -17,7 +17,8 @@ begin
         if l =~ /^---\n$/ 
           sep_count += 1
           next if sep_count <= 2
-        else if l == l.start_with?("created_at:")
+        end
+        if l.start_with?("created_at:")
           p "created_at:::::::::::::"
         end 
         if sep_count <= 1
