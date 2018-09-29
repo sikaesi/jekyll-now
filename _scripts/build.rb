@@ -33,7 +33,7 @@ begin
       file.print(body_str)
     end
 
-    File.unlink(filename)
+    # File.unlink(filename)
   end
 
 rescue
