@@ -1,12 +1,4 @@
 ---
-title: "githubとの連携テスト_4th"
-category: 2018/09/30
-tags: 
-created_at: 2018-09-30 05:33:35 +0900
-updated_at: 2018-09-30 05:33:35 +0900
-published: true
-number: 27
----
 
 Copied from: [diary/2018/09/30/githubとの連携テスト_3rd](/posts/26)
 
