@@ -16,7 +16,7 @@ begin
         if l =~ /^---\n$/ 
           sep_count += 1
         end
-        if sep_count <= 2
+        if sep_count <= 1
           meta_str += l
         else
           body_str += l
