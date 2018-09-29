@@ -30,7 +30,7 @@ begin
 
     p title
 
-    File.open("_posts/#{title}", "w") do |file|
+    File.open("_posts/#{title}.md", "w") do |file|
       file.print(body_str)
     end
 
