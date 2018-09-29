@@ -6,7 +6,7 @@ begin
   files = Dir.glob("_drafts/*.md")
   
   files.each do | filename |
-    sep_count = 1
+    sep_count = 0
     meta_str = ""
     body_str = ""
     p filename
@@ -15,7 +15,7 @@ begin
       file.each_line do |l|
         if l =~ /^---\n$/ 
           sep_count += 1
-          next if sep_count <= 2
+          next if sep_count <= 1
         end
         if sep_count <= 2
           meta_str += l
