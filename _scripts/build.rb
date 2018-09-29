@@ -15,7 +15,6 @@ begin
       file.each_line do |l|
         if l =~ /^---\n$/ 
           sep_count += 1
-          next if sep_count <= 1
         end
         if sep_count <= 2
           meta_str += l
