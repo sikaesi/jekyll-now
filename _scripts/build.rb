@@ -3,23 +3,23 @@ require 'stringio'
 
 begin
 
-  files = Dir.glob("_drafts/*.md")
+  files = Dir.glob("./*.md")
   
   files.each do | filename |
-    sep_count = 1
+    sep_count = 0
     meta_str = ""
     body_str = ""
+    prefix = ""
     p filename
 
     File.open(filename) do |file|
       file.each_line do |l|
-        p l
         if l =~ /^---\n$/ 
           sep_count += 1
           next if sep_count <= 2
         end
-        if l.start_with?("created_at:")
-          p l｡split(":")[1]
+        if l.start_with?("created_at: ")
+          prefix = l.split(": ")[1][0,10]
         end 
         if sep_count <= 1
           meta_str += l
@@ -28,9 +28,9 @@ begin
         end
       end
     end
-
+    
     meta = YAML.load(meta_str)
-    title = meta["title"]
+    title = prefix.concat(meta["title"])
 
     p title
 
