@@ -3,7 +3,7 @@ require 'stringio'
 
 begin
 
-  files = Dir.glob("./*.md")
+  files = Dir.glob("_drafts/*.md")
   
   files.each do | filename |
     sep_count = 0
